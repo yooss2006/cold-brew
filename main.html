@@ -6,26 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee</title>
     <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div class="container">
-        <gnb>
-            <h1>COFFEE</h1>  
-        </gnb>
-        <main>
-            <div class="introduce">
-                <img src="./public//coldbrew.png">
-                <h2>COLD BREW</h2>
-                <p>차가운 물에 장시간 걸쳐 추출하는 커피</p>
-            </div>
-        </main>
-        
-    </div>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
+    <!-- jquerysetting -->
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous">
     </script>
+</head>
+<body>
+    <div class="container">
+
+        <gnb>
+            <i class="fas fa-coffee"><h2>콜드브루</h2></i>
+            <h1 class="title">COFFEE</h1>  
+        </gnb>
+        <main>
+            <div class="introduce">
+                <img src="./public//coldbrew.png">
+                <h2>COLD BREW</h2>
+                <i class="fas fa-book"></i>
+                <p>차가운 물에 장시간 걸쳐 추출하는 커피로</p>
+                <p>"쓴맛이 적고 부드러운게 특징"</p>
+            </div>
+
+            <div class="process">
+                <div class="grate process-frame">
+                    <h1>1.</h1>
+                    <h2>원두 갈기</h2>
+                    <p>원두를 분쇄기에 갈아준다.</p>
+                    <p>필터에 쉽게 거르기위해 조금 굵게 분쇄하는 것이 좋다. </p>
+                    <video autoplay muted loop>
+                        <source src="./public/coffee1.mp4" type="video/mp4"> 
+                    </video>
+                </div>
+                <div class="mix process-frame">
+                    <h1>2.</h1>
+                    <h2>물과 섞기</h2>
+                    <p>갈린 원두를 물과 섞어준다.</p>
+                    <p>원두와 물의 비율은 1대5가 좋다. </p>
+                </div>
+                <div class="grate process-frame">
+                    <h1>3.</h1>
+                    <h2>원두 갈기</h2>
+                    <p>원두를 분쇄기에 갈아준다.</p>
+                    <p>필터에 쉽게 거르기위해 조금 굵게 분쇄하는 것이 좋다. </p>
+                </div>
+                <div class="grate process-frame">
+                    <h1>4.</h1>
+                    <h2>원두 갈기</h2>
+                    <p>원두를 분쇄기에 갈아준다.</p>
+                    <p>필터에 쉽게 거르기위해 조금 굵게 분쇄하는 것이 좋다. </p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+
+    <script>
+        $(window).on("scroll", function(){
+                if($(window).scrollTop()>150){
+                    $('.introduce > img').css("width", "10%");
+                }else{
+                    $('.introduce > img').css("width", "30%");
+                }
+                
+                
+                
+                if($(window).scrollTop()>190){
+                $('body').css("background", "white");
+                $('.container').css("color", "black");
+                $('gnb > h1').css("display", "none");
+                $('.introduce h2').css("font-size", "3em");
+                $('.introduce i').css("display", "inline-block");
+                
+            }else{
+                $('body').css("background", "black");
+                $('.container').css("color", "white");
+                $('gnb > h1').css("display", "inline-block");
+                $('.introduce h2').css("font-size", "1.5em");
+                $('.introduce i').css("display", "none");
+            }
+            console.log($(window).scrollTop());
+        });
+    </script>
+
+
+
+    
 </body>
 </html>
