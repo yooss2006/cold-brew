@@ -33,7 +33,7 @@
             <div class="process">
                 <div class="grate process-frame">
                     <h1>1.</h1>
-                    <h2>원두 갈기</h2>
+                    <h2>" 원두 갈기 "</h2>
                     <p>원두를 분쇄기에 갈아준다.</p>
                     <p>필터에 쉽게 거르기위해 조금 굵게 분쇄하는 것이 좋다. </p>
                     <video autoplay muted loop>
@@ -42,21 +42,41 @@
                 </div>
                 <div class="mix process-frame">
                     <h1>2.</h1>
-                    <h2>물과 섞기</h2>
+                    <h2>" 물과 섞기 "</h2>
                     <p>갈린 원두를 물과 섞어준다.</p>
                     <p>원두와 물의 비율은 1대5가 좋다. </p>
+                    <video autoplay muted loop>
+                        <source src="./public/mix.mp4" type="video/mp4"> 
+                    </video>
                 </div>
-                <div class="grate process-frame">
+                <div class="cold process-frame">
                     <h1>3.</h1>
-                    <h2>원두 갈기</h2>
-                    <p>원두를 분쇄기에 갈아준다.</p>
-                    <p>필터에 쉽게 거르기위해 조금 굵게 분쇄하는 것이 좋다. </p>
+                    <h2>" 냉장보관 "</h2>
+                    <p>섞여있는 원액을 냉장보관한다.</p>
+                    <p>12시간정도 냉장고에 넣어 숙성시킨다. </p>
+                    <video autoplay muted loop>
+                        <source src="./public/Refrigerator.mp4" type="video/mp4"> 
+                    </video>
                 </div>
-                <div class="grate process-frame">
+
+                <div class="colander process-frame">
                     <h1>4.</h1>
-                    <h2>원두 갈기</h2>
-                    <p>원두를 분쇄기에 갈아준다.</p>
-                    <p>필터에 쉽게 거르기위해 조금 굵게 분쇄하는 것이 좋다. </p>
+                    <h2>" 거르기 "</h2>
+                    <p>원두가루와 물을 걸러준다.</p>
+                    <p>드리퍼나 커피필터를 이용하여 걸러주고 없다면 키친타올을 이용한다.</p>
+                    <video autoplay muted loop>
+                        <source src="./public/colander.mp4" type="video/mp4"> 
+                    </video>
+                </div>
+
+                <div class="drink process-frame">
+                    <h1>5.</h1>
+                    <h2>" 즐기기 "</h2>
+                    <p>원두의 향을 즐긴다.</p>
+                    <p>잔에 얼음을 넣고 물과 콜드브루 원액을 취향껏 넣어 마신다.</p>
+                    <video autoplay muted loop>
+                        <source src="./public/Drink.mp4" type="video/mp4"> 
+                    </video>
                 </div>
             </div>
         </main>
@@ -65,21 +85,21 @@
 
     <script>
         $(window).on("scroll", function(){
-                if($(window).scrollTop()>150){
-                    $('.introduce > img').css("width", "10%");
-                }else{
-                    $('.introduce > img').css("width", "30%");
-                }
+            const scroll_length=$(window).scrollTop();
+            if(scroll_length>150){
+                $('.introduce > img').css("width", "10%");
+            }else{
+                $('.introduce > img').css("width", "30%");
+            }
                 
                 
-                
-                if($(window).scrollTop()>190){
-                $('body').css("background", "white");
-                $('.container').css("color", "black");
-                $('gnb > h1').css("display", "none");
-                $('.introduce h2').css("font-size", "3em");
-                $('.introduce i').css("display", "inline-block");
-                
+            
+            if(scroll_length>190){
+            $('body').css("background", "white");
+            $('.container').css("color", "black");
+            $('gnb > h1').css("display", "none");
+            $('.introduce h2').css("font-size", "3em");
+            $('.introduce i').css("display", "inline-block");   
             }else{
                 $('body').css("background", "black");
                 $('.container').css("color", "white");
@@ -87,6 +107,78 @@
                 $('.introduce h2').css("font-size", "1.5em");
                 $('.introduce i').css("display", "none");
             }
+
+            if(scroll_length>650){
+                $('body').css("background", "#734022");
+                $('.grate').css("color", "#F2E2CE");
+            }else{
+                $('.grate').css("color", "black");
+            }
+
+            if(scroll_length>930){
+                $('.grate > video').css("width", "100%");
+            }else{
+                $('.grate > video').css("width", "50%");
+            }
+
+            if(scroll_length>1300){
+                $('body').css("background", "#3C74AA");
+                $('.mix').css("color", "#B9EBFD");
+                $('.grate > video').css("width", "50%");
+            }else{
+                $('.mix').css("color", "black");
+            }
+
+            if(scroll_length>1450){
+                $('.mix > video').css("width", "100%");
+            }else{
+                $('.mix > video').css("width", "50%");
+            }
+
+            if(scroll_length>1950){
+                $('body').css("background", "#F68955");
+                $('.cold').css("color", "#F9F3EA");
+                $('.mix > video').css("width", "50%");
+            }else{
+                $('.cold').css("color", "black");
+            }
+
+            if(scroll_length>2150){
+                $('.cold > video').css("width", "100%");
+            }else{
+                $('.cold > video').css("width", "50%");
+            }
+
+            if(scroll_length>2500){
+                $('body').css("background", "#A62121");
+                $('.colander').css("color", "#F9F3EA");
+                $('.cold > video').css("width", "50%");
+            }else{
+                $('.colander').css("color", "black");
+            }
+
+            if(scroll_length>2700){
+                $('.colander > video').css("width", "100%");
+            }else{
+                $('.colander > video').css("width", "50%");
+            }
+
+            if(scroll_length>3150){
+                $('body').css("background", "#0D0D0D");
+                $('.drink').css("color", "#F2F2F2");
+                $('.colander > video').css("width", "50%");
+            }else{
+                $('.drink').css("color", "black");
+            }
+
+            if(scroll_length>3350){
+                $('.drink > video').css("width", "100%");
+            }else{
+                $('.drink > video').css("width", "50%");
+            }
+
+
+
             console.log($(window).scrollTop());
         });
     </script>

@@ -38,19 +38,19 @@ gnb i{
     left: 15%;
     color: black;
     font-family: 'ONE-Mobile-POP';
+    
 }
 gnb i h2{
     font-family: 'HSYuji-Regular';
     font-size: 1.2em;
     margin-left: 30px;
     display: inline-block;
-    z-index: 3;
 }
 
 
 .introduce{
     text-align: center;
-    margin: 150px 0;
+    margin: 150px 0 200px 0;
 }
 .introduce img{
     width: 30%;
@@ -80,6 +80,7 @@ gnb i h2{
 }
 .grate{
     scroll-snap-align: center;
+    transition: all 0.5s;
 }
 .process-frame{
     scroll-snap-align: center;
@@ -95,11 +96,13 @@ gnb i h2{
 }
 .process-frame p{
     font-family: 'GowunDodum-Regular';
+    margin: 10px;
 }
 .process-frame video{
     margin: 20px 0;
     width: 50%;
     border-radius: 20px;
+    transition: all 2s;
 }
 
 
